@@ -5,6 +5,11 @@
         <h3>Summary</h3>
         <table>
             <tr>
+                <th><i class="icon-fire"></i></th>
+                <th>Crash Signature</th>
+                <td colspan=5>{{report.SIGNATURE.digest}}</td>
+            </tr>
+            <tr>
                 <th><i class="icon-gift"></i></th>
                 <th>Package name</th>
                 <td>{{report.PACKAGE_NAME}}</td>
@@ -12,15 +17,6 @@
                 <td>{{report.APP_VERSION_CODE}}</td>
                 <th>Application version name</th>
                 <td>{{report.APP_VERSION_NAME}}</td>
-            </tr>
-            <tr>
-                <th><i class="icon-time"></i></th>
-                <th>Uptime</th>
-                <td class="nobr">{{report.readableUptime}}</td>
-                <th>Crashed</th>
-                <td>{{report.formatedCrashDate}}</td>
-                <th>Reported</th>
-                <td>{{report.formatedTimestamp}}</td>
             </tr>
             <tr>
                 <th><i class="icon-user"></i></th>
@@ -33,8 +29,8 @@
                 </td>
                 <th>E-mail</th>
                 <td><a href="mailto:{{report.USER_EMAIL}}">{{report.USER_EMAIL}}</a></td>
-                <th>Comment</th>
-                <td>{{report.USER_COMMENT}}</td>
+                <th>Device</th>
+                <td>{{report.BUILD.MANUFACTURER}} {{report.BUILD.BRAND}} {{report.BUILD.MODEL}}</td>
             </tr>
             <tr>
                 <th rowspan="2"><i class="icon-fire"></i></th>
@@ -44,9 +40,9 @@
                 </td>
             </tr>
             <tr>
-                <th>Custom Data</th>
-                <td colspan="5">
-                    <div prettyprint="report.CUSTOM_DATA"/>
+                <th>LogCat</th>
+                <td colspan="5" class="stacktrace" prettyprint="report.LOGCAT">
+                    <!-- <div ng-repeat="logline in report.LOGCAT" class="pre">{{logline}}</div> -->
                 </td>
             </tr>
         </table>

@@ -1,7 +1,7 @@
 (function(acralyzerConfig, undefined ) {
     "use strict";
     // Update this variable with the name of your app:
-    acralyzerConfig.defaultApp = "";
+    acralyzerConfig.defaultApp = "mupen64plusae";
     acralyzerConfig.backgroundPollingOnStartup = true;
 
     acralyzerConfig.appDBPrefix = "acra-";

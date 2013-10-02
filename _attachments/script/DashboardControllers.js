@@ -373,10 +373,11 @@
     /* Pie charts */
     function PieChartsCtrl($scope, ReportsStore, $user) {
         $scope.fieldNames = [
-            {name: "android-version", label: "Android version"},
-            {name: "android-sdk-version", label: "Android SDK version"},
+            {name: "signature", label: "Signature"},
             {name: "app-version-name", label: "Application version name"},
             {name: "app-version-code", label: "Application version code"},
+            {name: "android-sdk-version", label: "Android SDK version"},
+            {name: "android-version", label: "Android version"},
             {name: "device", label: "Device"}
         ];
         $scope.fieldName = $scope.fieldNames[0];

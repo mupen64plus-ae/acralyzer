@@ -80,6 +80,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    vertical-align:top;
 }
 
 .report-details td:first-child,
@@ -89,6 +90,7 @@ table th {
     border: 1px solid #ccc;
     padding: 0 0.5em;
     font-weight: bold;
+    vertical-align:top;
 }
 
 table td {
